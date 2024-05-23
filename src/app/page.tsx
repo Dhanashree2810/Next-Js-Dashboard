@@ -17,7 +17,7 @@ import { userSchema } from '@/app/validationSchema';
 import Link from 'next/link';
 
 export default function Home() {
-  const router = useRouter(); // Initialize the router
+  const router = useRouter();
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [errors, setErrors] = useState({ email: '', password: '' });
 
@@ -42,15 +42,14 @@ export default function Home() {
     } else {
       setErrors({ email: '', password: '' });
       alert("Login Successfully");
-      router.push('/dashboard'); // Navigate to '/dashboard'
+      router.push('/dashboard');
       console.log(result);
-      
+
     }
   };
 
   return (
     <div className='container max-w-full p-0'>
-      {/* banner */}
       <div className="py-20 bg-fixed bg-cover bg-center" style={{ backgroundImage: `url(${bg.src})` }}>
         <div className="container py-28 flex justify-center items-center">
           <Card className="grid grid-cols-1 h-1/4 w-2/6">
@@ -61,9 +60,7 @@ export default function Home() {
             <CardContent>
 
               <form onSubmit={handleSubmit}>
-
                 <div className="grid w-full items-center gap-4">
-
                   <div className="flex flex-col space-y-1.5">
                     <Label htmlFor="email">Email :</Label>
                     <Input type='email' id="email" name="email" placeholder="Enter Email" value={formData.email} onChange={handleChange} />

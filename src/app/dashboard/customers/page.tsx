@@ -17,7 +17,7 @@ export default function CustomersPage() {
     <div>
       <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
         <div className="grid gap-4 md:grid-cols-1 md:gap-8">
-          <h1 className=' font-bold text-2xl leading-3'>Personal Info</h1>
+          <h1 className=' font-bold text-xl leading-3 underline'>Personal Info</h1>
           <h1 className=' font-bold text-lg'>About Me</h1>
           <Table className='w-full'>
             {/* <TableCaption className=' font-bold text-lg'></TableCaption> */}

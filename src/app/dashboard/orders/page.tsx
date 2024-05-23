@@ -30,7 +30,7 @@ const orderList = [
     customer: "Liam Johnson",
     payment: "Unpaid",
     status: "New order",
-    total: '60.00'
+    total: '₹60.00'
   },
   {
     id: "#1020",
@@ -38,7 +38,7 @@ const orderList = [
     customer: "Noah Williams",
     payment: "Unpaid",
     status: "New order",
-    total: '499.00'
+    total: '₹499.00'
   },
   {
     id: "#1021",
@@ -46,7 +46,7 @@ const orderList = [
     customer: "Olivia Smith",
     payment: "Paid",
     status: "Marked as Paid",
-    total: '569.00'
+    total: '₹569.00'
   },
   {
     id: "#1022",
@@ -54,7 +54,7 @@ const orderList = [
     customer: "Emma Brown",
     payment: "Paid",
     status: "Marked as Paid",
-    total: '259.00'
+    total: '₹259.00'
   },
   {
     id: "#1023",
@@ -62,7 +62,7 @@ const orderList = [
     customer: "Olivia Smith",
     payment: "COD",
     status: "New order",
-    total: '1299.00'
+    total: '₹1299.00'
   }
 ]
 
@@ -169,7 +169,7 @@ export default function OrdersPage() {
                       <TableCell>{follow.customer}</TableCell>
                       <TableCell>{follow.payment}</TableCell>
                       <TableCell>{follow.status}</TableCell>
-                      <TableCell className="text-right">{follow.total}</TableCell>
+                      <TableCell className="text-right font-semibold">{follow.total}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>

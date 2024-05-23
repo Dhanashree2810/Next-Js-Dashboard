@@ -60,7 +60,7 @@ const followersList = [
     progress :"95%",
   },
   {
-    invoice: "6",
+    id: "6",
     project: "Tesla",
     manager : "Mickey",
     status : "In Progress",
@@ -73,7 +73,7 @@ export default function dashboard() {
     <div>
       <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">        
         <div className="grid gap-4 md:grid-cols-4 md:gap-8">
-          <Card className='bg-green-400  text-white'>
+          <Card className='bg-green-400  text-white hover:cursor-pointer'>
             {/* card 1 */}
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-3xl font-bold">
@@ -90,7 +90,7 @@ export default function dashboard() {
           </Card>
 
           {/* card 2 */}
-          <Card className='bg-orange-400  text-white'>
+          <Card className='bg-orange-400  text-white hover:cursor-pointer'>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-3xl font-bold">
                 135
@@ -106,7 +106,7 @@ export default function dashboard() {
           </Card>
 
           {/* card 3 */}
-          <Card className='bg-blue-400  text-white'>
+          <Card className='bg-blue-400  text-white hover:cursor-pointer'>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-3xl font-bold">
                 23
@@ -122,7 +122,7 @@ export default function dashboard() {
           </Card>
 
           {/* card 4 */}
-          <Card  className='bg-emerald-400  text-white'>
+          <Card  className='bg-emerald-400  text-white hover:cursor-pointer'>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-3xl font-bold">
                 1000
@@ -140,15 +140,16 @@ export default function dashboard() {
 
         {/* md:grid-cols-2 xl:grid-cols-2 md:gap-8 */}
         <div className='grid gap-4'>
+          <h1 className=' font-bold text-lg flex justify-center underline'>Recent Followers</h1>
           <Table className='w-full border box-border'>
-            <TableCaption className=' font-bold text-xl'>Recent Followers</TableCaption>
+            {/* <TableCaption className=' font-bold text-lg'>Recent Followers</TableCaption> */}
             <TableHeader>
               <TableRow>
-                <TableHead className="font-bold text-lg">#</TableHead>
-                <TableHead className=' font-bold text-lg'>Project</TableHead>
-                <TableHead className=' font-bold text-lg'>Manager</TableHead>
-                <TableHead className=' font-bold text-lg'>Status</TableHead>
-                <TableHead className="text-right font-bold text-lg">Progress</TableHead>
+                <TableHead className="font-bold text-sm">#</TableHead>
+                <TableHead className=' font-bold text-sm'>Project</TableHead>
+                <TableHead className=' font-bold text-sm'>Manager</TableHead>
+                <TableHead className=' font-bold text-sm'>Status</TableHead>
+                <TableHead className="text-right font-bold text-sm">Progress</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
